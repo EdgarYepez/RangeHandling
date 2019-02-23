@@ -33,8 +33,12 @@ In case of having any comments, suggestions or finding issues, send an e-mail to
 
 By the moment, the only way to get the library is by manually downloading it from or cloning the [https://gitlab.com/SantiagoYepez/RangeHandling](https://gitlab.com/SantiagoYepez/RangeHandling) repository. Once downloaded, copy the `YERangeHandling` directory either into a Perl module's directory, so that it is globally available, or into a directory in where its usage is expected.
 
-The library was written and tested in Perl 5, version 26, subversion 1 (v5.26.1). It is no warrantied it will work in any other Perl version (not even in v5.26.1). 
+The library was written and tested in Perl 5, version 26, subversion 1 (v5.26.1). It is not warrantied it will work in any other Perl version (not even in v5.26.1). 
 
 ## Usage
 
 Refer to the  `USAGE.md` file.
+
+## Examples
+
+Coming soon...
