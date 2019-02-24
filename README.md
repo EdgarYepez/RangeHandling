@@ -37,7 +37,7 @@ The library was written and tested in Perl 5, version 26, subversion 1 (`v5.26.1
 
 ## Usage
 
-Refer to the  `Docs` directory.
+Visit the [wiki](https://gitlab.com/SantiagoYepez/RangeHandling/wikis/Usage/Main).
 
 ## Examples
 
