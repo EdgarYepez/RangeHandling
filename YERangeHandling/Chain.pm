@@ -61,7 +61,7 @@ package Chain;
 			$code = sub { return 0 + shift; } unless defined $code;
 			esylio->assertRef2($code, "CODE", 1);
 			$self->{trimDecimalFunction} = $code;
-			$self->yieldByIndexes(sub{
+			$self->yieldByIndexes(sub {
 				my ($node, $index) = @_;
 				$node->range->trimDecimalFunction($code);
 				return 0;

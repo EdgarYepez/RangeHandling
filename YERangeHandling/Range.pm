@@ -143,7 +143,7 @@ package Range;
 	sub assertBounds {
 		my $self = shift;
 		my ($min, $max) = @_;
-		esylio->customDie("Maximun value must be greater than minimum value.\n\tmax: $max\n\tmin: $min\n") if !$self->{settingTrimFunction} && defined $max && defined $min && $max < $min;
+		esylio->customDie("Maximum value must be greater than or equal to minimum value.\n\tmax: $max\n\tmin: $min\n") if !$self->{settingTrimFunction} && defined $max && defined $min && $max < $min;
 	}
 
 	sub boundaries {
