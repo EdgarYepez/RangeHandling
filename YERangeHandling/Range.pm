@@ -54,6 +54,8 @@ package Range;
 		return $self->min, $self->max;
 	}
 
+	sub boundaries { return shift->raw; }
+
 	sub trimDecimalFunction {
 		my $self = shift;
 		if (@_) {
@@ -144,11 +146,6 @@ package Range;
 		my $self = shift;
 		my ($min, $max) = @_;
 		esylio->customDie("Maximum value must be greater than or equal to minimum value.\n\tmax: $max\n\tmin: $min\n") if !$self->{settingTrimFunction} && defined $max && defined $min && $max < $min;
-	}
-
-	sub boundaries {
-		my $self = shift;
-		return $self->min, $self->max;
 	}
 
 	sub equals {
