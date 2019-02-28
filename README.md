@@ -29,4 +29,4 @@ In case of having any comments, suggestions or finding issues, send an e-mail to
 
 ## Installation and usage
 
-Visit the [Usage page](https://gitlab.com/SantiagoYepez/RangeHandling/wikis/Usage/Main).
+Visit the [usage page](https://gitlab.com/SantiagoYepez/RangeHandling/wikis/Usage).
