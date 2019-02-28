@@ -163,15 +163,25 @@ package Range;
 
 	sub getWhole {
 		my $class = shift;
-		my ($ABounds, $BBounds, $trimDecimalFunction) = @_;
-		esylio->assertRef2($ABounds, "Range", 0);
-		esylio->assertRef2($BBounds, "Range", 0);
-		return undef unless defined $ABounds || defined $BBounds;
-		return $BBounds unless defined $ABounds;
-		return $ABounds unless defined $BBounds;
-		my ($tierAMin, $tierAMax) = $ABounds->raw;
-		my ($tierBMin, $tierBMax) = $BBounds->raw;
-		return Range->new($tierAMin < $tierBMin ? $tierAMin : $tierBMin, $tierAMax > $tierBMax ? $tierAMax : $tierBMax, $trimDecimalFunction);
+		my ($range1, $range2, $trimDecimalFunction) = @_;
+		my $ret = $class->getWholeFromCollection($range1, $range2);
+		$ret->trimDecimalFunction($trimDecimalFunction) if defined $ret;
+		return $ret;
+	}
+
+	sub getWholeFromCollection {
+		my $class = shift;
+		my @ranges = @_;
+		my $min = undef;
+		my $max = undef;
+		for my $r (@ranges) {
+			if (defined $r) {
+				esylio->assertRef2($r, "Range", 0);
+				$min = $r->min unless defined $min && $min < $r->min;
+				$max = $r->max unless defined $max && $max > $r->max;
+			}
+		}
+		return defined $min && defined $max ? Range->new($min, $max) : undef;
 	}
 
 1;
