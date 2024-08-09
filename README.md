@@ -25,8 +25,6 @@ It is allowed to use the software for commercial purposes.
 
 **RangeHandling is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. It was written and tested in Perl 5, version 26, subversion 1 (`v5.26.1`) and there are no warranties that it might work in any other Perl version, not even in `v5.26.1`.**
 
-In case of having any comments, suggestions or finding issues, send an e-mail to edgaryepezec@gmail.com.
-
 ## Installation and usage
 
 Visit the [usage page](https://gitlab.com/SantiagoYepez/RangeHandling/wikis/Usage).
